@@ -9,6 +9,11 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "BoostYourLeads Pixel",
+  "categories": [
+    "ANALYTICS",
+    "ATTRIBUTION",
+    "LEAD_GENERATION"
+  ],
   "brand": {
     "id": "brand_boostyourleads",
     "displayName": "BoostYourLeads"
