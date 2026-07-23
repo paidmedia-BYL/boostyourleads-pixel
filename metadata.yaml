@@ -2,5 +2,5 @@ homepage: "https://agents.boostyourleads.ca"
 documentation: "https://agents.boostyourleads.ca"
 displayVersion: "1.0.0"
 versions:
-  - sha: "replace_with_your_commit_sha"
+  - sha: "db70e7da3c023d8c11e3b6e74a8992a7e7048a1b"
     changeNotes: "Initial release of the native BoostYourLeads Pixel template."
