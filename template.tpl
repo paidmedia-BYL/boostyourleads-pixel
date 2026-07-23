@@ -61,7 +61,7 @@ const injectScript = require('injectScript');
 const copyFromWindow = require('copyFromWindow');
 const logToConsole = require('logToConsole');
 
-const trackingUrl = 'https://boostyourleads-backend-910265023456.us-central1.run.app/byl-tag.js';
+const trackingUrl = 'https://back-end.boostyourleads.ca/byl-tag.js';
 
 // Inject the core tracking script on the user's webpage
 injectScript(trackingUrl, () => {
@@ -99,7 +99,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "value": "https://boostyourleads-backend-910265023456.us-central1.run.app/byl-tag.js"
+                "value": "https://back-end.boostyourleads.ca/byl-tag.js"
               }
             ]
           }
