@@ -1,7 +1,6 @@
-changeNotes: "Update backend tracking pixel URL to back-end.boostyourleads.ca"
 homepage: "https://agents.boostyourleads.ca"
 documentation: "https://agents.boostyourleads.ca"
 displayVersion: "1.0.0"
 versions:
-  - sha: "298076a4a07cce1a3358e621d693b3bd072623f7"
+  - sha: "383cd2687497b7728235681fd73369cb55ea1392"
     changeNotes: "Update backend tracking pixel URL to back-end.boostyourleads.ca"
