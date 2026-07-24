@@ -59,6 +59,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const injectScript = require('injectScript');
 const copyFromWindow = require('copyFromWindow');
+const callInWindow = require('callInWindow');
 const logToConsole = require('logToConsole');
 
 const trackingUrl = 'https://back-end.boostyourleads.ca/byl-tag.js';
@@ -67,82 +68,17 @@ const trackingUrl = 'https://back-end.boostyourleads.ca/byl-tag.js';
 injectScript(trackingUrl, () => {
   const byl = copyFromWindow('byl');
   if (byl) {
-    byl('init', data.clientId);
+    callInWindow('byl', 'init', data.clientId);
     
     if (data.trackPageview) {
-      byl('track', 'pageview');
+      callInWindow('byl', 'track', 'pageview');
     }
     
     if (data.trackForms) {
-      byl('track', 'forms');
+      callInWindow('byl', 'track', 'forms');
     }
   } else {
     logToConsole('BYL Tracker failed to initialize.');
   }
   data.gtmOnSuccess();
 }, data.gtmOnFailure);
-
-___WEB_PERMISSIONS___
-
-[
-  {
-    "instance": {
-      "key": {
-        "publicId": "inject_script",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "urls",
-          "value": {
-            "type": 2,
-            "listItem": [
-              {
-                "type": 1,
-                "value": "https://back-end.boostyourleads.ca/byl-tag.js"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "access_globals",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "keys",
-          "value": {
-            "type": 2,
-            "listItem": [
-              {
-                "type": 3,
-                "key": "byl",
-                "read": true,
-                "write": true,
-                "execute": true
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "isRequired": true
-  }
-]
-
-___TESTS___
-
-scenarios: []
-
-___NOTES___
-
-Released natively for GTM Community Template Gallery.
